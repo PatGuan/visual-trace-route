@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #EDEBF2;
+}
+
+a {
+  color: #EBE9F0;
+}
+#map {
+  height: 100px;
+  background-color: blue;
+}
+#googleMap {
+  height: 500px;
+  width: 90%;
+  margin: 0px;
+}
+#theButton {
+	height: 30px;
+	margin-left: 50px;
+	margin-top: 15px;
+	width: 5%;
+}
+#websiteInput {
+	margin-bottom: 5px;
+}

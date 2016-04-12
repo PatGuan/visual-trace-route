@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    script(src="http://code.jquery.com/jquery-1.11.0.min.js")
+    script(src="http://maps.googleapis.com/maps/api/js")
+    script(src='/javascripts/map.js')
+    link(href='/stylesheets/style.css', rel='stylesheet')
+
+  block content
+    h1 Choose a location
+
+    h1 Enter a website and I will tell you its destiny.
+
+    div#googleMap
+
+
+    input#websiteInput(placeholder="Enter a website")
+    button#theButton Trace
+
+    p#additionalInfo
