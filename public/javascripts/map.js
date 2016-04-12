@@ -11,6 +11,7 @@ function initMap() {
 
 function getTraceRoute() {
 	var websiteInput = $("#websiteInput").val();
+	$("#additionalInfo").html("");
 	toggleInputFieldAndButton(true);
 	$.ajax({
 		url: "/traceIp",
@@ -18,14 +19,13 @@ function getTraceRoute() {
 		dataType: 'json',
 		type: "POST",
 		success: function(response) {
-			console.log(response);
 			toggleInputFieldAndButton(false);
 			informTimedOutRequests(response.timedOutRequests);
 			var parsedTraceRouteDetailsList = extractTracerouteDetailsFromResponse(response.websiteData);
 			mapAllMarkersOnMap(parsedTraceRouteDetailsList);
 		},
 		error: function() {
-			console.log("error");
+			$("#additionalInfo").html("There was an error processing your request");
 			toggleInputFieldAndButton(false);
 		}
 	});
